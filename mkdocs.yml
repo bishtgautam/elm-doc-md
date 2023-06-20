@@ -50,4 +50,4 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-repo_url: https://github.com/RDycore/toy-problems
+repo_url: https://github.com/e3sm-project/e3sm
