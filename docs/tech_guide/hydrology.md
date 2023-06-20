@@ -4,11 +4,11 @@ The model parameterizes interception, throughfall, canopy drip, snow
 accumulation and melt, water transfer between snow layers, infiltration,
 evaporation, surface runoff, sub-surface drainage, redistribution within
 the soil column, and groundwater discharge and recharge to simulate
-changes in canopy water $\Delta W_{can,\,liq}$, canopy snow water
-$\Delta W_{can,\,sno}$ surface water $\Delta W_{sfc}$ ,
-snow water $\Delta W_{sno}$ , soil water
-$\Delta w_{liq,\, i}$ , and soil ice $\Delta w_{ice,\, i}$ ,
-and water in the unconfined aquifer $\Delta W_{a}$  (all in kg
+changes in canopy water, $\Delta W_{can,\,liq}$, canopy snow water,
+$\Delta W_{can,\,sno}$, surface water, $\Delta W_{sfc}$,
+snow water, $\Delta W_{sno}$, soil water,
+$\Delta w_{liq,\, i}$ , and soil ice, $\Delta w_{ice,\, i}$,
+and water in the unconfined aquifer, $\Delta W_{a}$  (all in kg
 m$^{-2}$ or mm of H$_2$O).
 
 The total water balance \eqref{eqn:h2o_budget} of the system is
