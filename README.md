@@ -5,7 +5,7 @@ the E3SM Land Model.
 
 - The guide in this repo is written in [Markdown (MD)](https://www.markdownguide.org/).
 - [MkDocs](https://www.mkdocs.org/) is used to generate the html pages based on MD.
-  - The guide is hosted using Github pages [here](https://bishtgautam.github.io/elm-doc-md/).
+  - The guide is hosted using Github pages [https://bishtgautam.github.io/elm-doc-md](https://bishtgautam.github.io/elm-doc-md/).
 - This repo contains two branchs:
   - `main`
   - `gh-pages`: This branch is created by `mkdocs` and is used by Github pages to display the guide
