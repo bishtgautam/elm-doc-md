@@ -3,7 +3,7 @@ site_name: "E3SM Land Model Documentation"
 nav:
   - Home: index.md
   - User's Guide:
-      - users_guide/introduction.md
+      - users_guide/overview.md
       - Getting started: users_guide/getting-started.md
   - Technical Guide:
       - tech_guide/overview.md
