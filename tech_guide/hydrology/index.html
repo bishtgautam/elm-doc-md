@@ -466,15 +466,16 @@
 accumulation and melt, water transfer between snow layers, infiltration,
 evaporation, surface runoff, sub-surface drainage, redistribution within
 the soil column, and groundwater discharge and recharge to simulate
-changes in canopy water <span class="arithmatex">\(\Delta W_{can,\,liq}\)</span> , canopy snow water
+changes in canopy water <span class="arithmatex">\(\Delta W_{can,\,liq}\)</span>, canopy snow water
 <span class="arithmatex">\(\Delta W_{can,\,sno}\)</span> surface water <span class="arithmatex">\(\Delta W_{sfc}\)</span> ,
 snow water <span class="arithmatex">\(\Delta W_{sno}\)</span> , soil water
 <span class="arithmatex">\(\Delta w_{liq,\, i}\)</span> , and soil ice <span class="arithmatex">\(\Delta w_{ice,\, i}\)</span> ,
 and water in the unconfined aquifer <span class="arithmatex">\(\Delta W_{a}\)</span>  (all in kg
 m<span class="arithmatex">\(^{-2}\)</span> or mm of H<span class="arithmatex">\(_2\)</span>O).</p>
-<p>The total water balance of the system is</p>
+<p>The total water balance \eqref{eqn:h2o_budget} of the system is</p>
 <div class="arithmatex">\[\begin{multline}
-   \Delta W_{can,\,liq} +\Delta W_{can,\,sno} +\Delta W_{sfc} +\Delta W_{sno} + \\
+  \label{eqn:h2o_budget}
+  \Delta W_{can,\,liq} +\Delta W_{can,\,sno} +\Delta W_{sfc} +\Delta W_{sno} + \\
       \sum _{i=1}^{N_{levsoi} }\left(\Delta w_{liq,\, i} +\Delta w_{ice,\, i} \right)+\Delta W_{a} = \\
          \left(\begin{array}{l} {q_{rain} +q_{sno} -E_{v} -E_{g} -q_{over} } \\ 
          {-q_{h2osfc} -q_{drai} -q_{rgwl} -q_{snwcp,\, ice} } \end{array}\right) \Delta t
