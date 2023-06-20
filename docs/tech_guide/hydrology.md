@@ -4,17 +4,18 @@ The model parameterizes interception, throughfall, canopy drip, snow
 accumulation and melt, water transfer between snow layers, infiltration,
 evaporation, surface runoff, sub-surface drainage, redistribution within
 the soil column, and groundwater discharge and recharge to simulate
-changes in canopy water $\Delta W_{can,\,liq}$ , canopy snow water
+changes in canopy water $\Delta W_{can,\,liq}$, canopy snow water
 $\Delta W_{can,\,sno}$ surface water $\Delta W_{sfc}$ ,
 snow water $\Delta W_{sno}$ , soil water
 $\Delta w_{liq,\, i}$ , and soil ice $\Delta w_{ice,\, i}$ ,
 and water in the unconfined aquifer $\Delta W_{a}$  (all in kg
 m$^{-2}$ or mm of H$_2$O).
 
-The total water balance of the system is
+The total water balance \eqref{eqn:h2o_budget} of the system is
 
 \begin{multline}
-   \Delta W_{can,\,liq} +\Delta W_{can,\,sno} +\Delta W_{sfc} +\Delta W_{sno} + \\
+  \label{eqn:h2o_budget}
+  \Delta W_{can,\,liq} +\Delta W_{can,\,sno} +\Delta W_{sfc} +\Delta W_{sno} + \\
       \sum _{i=1}^{N_{levsoi} }\left(\Delta w_{liq,\, i} +\Delta w_{ice,\, i} \right)+\Delta W_{a} = \\
          \left(\begin{array}{l} {q_{rain} +q_{sno} -E_{v} -E_{g} -q_{over} } \\ 
          {-q_{h2osfc} -q_{drai} -q_{rgwl} -q_{snwcp,\, ice} } \end{array}\right) \Delta t
@@ -35,3 +36,4 @@ due to snow capping
 $N_{levsoi}$ ; ground levels $N_{levsoi} +1$ to
 $N_{levgrnd}$ are currently hydrologically inactive;
 and $\Delta t$ is the time step (s).
+
