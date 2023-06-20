@@ -165,7 +165,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/RDycore/toy-problems" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/e3sm-project/e3sm" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -210,7 +210,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/RDycore/toy-problems" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/e3sm-project/e3sm" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -425,16 +425,13 @@
 the case. Let's get a ELM simulation going and we will get into details about
 certain settings (e.g. <code>-res</code> and <code>-compset</code>) later.</p>
 <ol>
-<li>Get the code </li>
-</ol>
+<li>Get the code 
 <div class="highlight"><pre><span></span><code>   git clone https://github.com/E3SM-Project/E3SM
    cd e3sm
    git submodule update --init --recursive
-</code></pre></div>
-<ol>
+</code></pre></div></li>
 <li>Create a new case for a specified resolution <code>-res &lt;&gt;</code> and compset <code>-compset &lt;&gt;</code> on
-   an E3SM-supported machine such as Cori, Compy, Anvil, Chrysalis, etc.</li>
-</ol>
+   an E3SM-supported machine such as Cori, Compy, Anvil, Chrysalis, etc.
 <div class="highlight"><pre><span></span><code>   cd cime/script
 
    # -case &lt;value&gt; : Path to your new case (e.g. `--case &lt;path-to-the-case&gt;/&lt;case-name&gt;`)
@@ -442,16 +439,15 @@ certain settings (e.g. <code>-res</code> and <code>-compset</code>) later.</p>
    # -compset IELM: Present day; land and river models are active; atm is data-model
 
    ./create_newcase -case $PWD/IELM.f09_f09 -res f09_f09 -compset IELM
-</code></pre></div>
+</code></pre></div></li>
+</ol>
 <p>One can additionally provide information to <code>create_newcase</code> regarding the machine
 on which the case is being created via <code>--machine</code> argument. On E3SM supported machine,
 <code>create_newcase</code> automatically detects the machine on which the case is being created.
 However, certain machines support two machine configurations (e.g. Cori supports cori-hawell
 and cori-knl configurations) and a user can choose one of the machine configurations
-by <code>--machine cori-knl</code> or <code>--machine cori-haswell</code>.</p>
-<ol>
-<li>Make any modifications to the case and setup the case</li>
-</ol>
+by <code>--machine cori-knl</code> or <code>--machine cori-haswell</code>.
+3. Make any modifications to the case and setup the case
 <div class="highlight"><pre><span></span><code>   cd IELM.f09_f09
 
    # Change the default 5-day run to be 1-year run
@@ -462,32 +458,21 @@ by <code>--machine cori-knl</code> or <code>--machine cori-haswell</code>.</p>
 
    ./case.setup
 </code></pre></div>
-<ol>
-<li>Now build/compile the code</li>
-</ol>
+4. Now build/compile the code
 <div class="highlight"><pre><span></span><code>   ./case.build
 </code></pre></div>
-<ol>
-<li>Submit the case and get email notifications</li>
-</ol>
+5. Submit the case and get email notifications
 <div class="highlight"><pre><span></span><code>   ./case.submit --mail-user john.doe@john-doe.org --mail-type all
 </code></pre></div>
-<ol>
-<li>After the model run is completed, the model output files will be in
-   the run directory (<code>./xmlquery RUNDIR</code>).</li>
-</ol>
-<p>.. code-block:: bash
+6. After the model run is completed, the model output files will be in
+   the run directory (<code>./xmlquery RUNDIR</code>).
 <div class="highlight"><pre><span></span><code>   ls -l &lt;RUNDIR&gt;/*.elm.h0*.YYYY-MM.nc
-</code></pre></div></p>
-<ol>
-<li>
-<p>Use your favorite scripting environment and make few type of plots such as</p>
-</li>
-<li>
-<p>Monthly spatial plots</p>
-</li>
+</code></pre></div>
+7. Use your favorite scripting environment and make few type of plots such as</p>
+<ul>
+<li>Monthly spatial plots</li>
 <li>Monthly time series</li>
-</ol>
+</ul>
 <p>Few variable to consider for plots are</p>
 <ul>
 <li><code>EFLX_LH_TOT</code> Total latent heat flux [+ to atm] (2D data)</li>
